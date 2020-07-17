@@ -1,0 +1,25 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card animated fadeInUp">
+                <img src="{{ image.path}}" class="card-img-top">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        Subido por
+                        <strong>{{user.name}}</strong>
+                    </h3>
+                    <h4>
+                        {{ image.title }}
+                    </h4>
+                    <p class="card-text">
+                        {{ image.description }} -
+                            {{ format image.created_at }}
+                    </p>
+                    {{#if isMine}}
+                    <a href="/image/{{ image._id}}/delete" class="btn btn-danger">Delete</a><a href="/image/{{ image._id}}/edit" class="btn btn-info ml-1">Edit</a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

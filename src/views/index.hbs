@@ -1,0 +1,15 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="card-columns">
+            {{#if images}}
+                {{#each images}}
+                    <div class="card animated fadeInUp">
+                        <a href="/image/{{_id}}"><img src="{{path}}" class="card-img-top"></a>
+                    </div>
+                {{/each}}
+            {{else}}
+                <p>No hay imagenes disponibles</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
